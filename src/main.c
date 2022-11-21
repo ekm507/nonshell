@@ -13,10 +13,19 @@ void handle_sigint(int sig)
 int main(void)
 {
     signal(SIGINT, handle_sigint);  
+    char input[MAX_LIMIT];
+    char *check_input;
     while(1)
     {
-        char input[MAX_LIMIT];
-        fgets(input, MAX_LIMIT, stdin);
+        check_input = fgets(input, MAX_LIMIT, stdin);
+        if (check_input != NULL)
+        {
+            printf("%s", input);
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     return 0;
