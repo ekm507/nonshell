@@ -20,7 +20,7 @@ int main(void)
         check_input = fgets(input, MAX_LIMIT, stdin);
         if (check_input != NULL)
         {
-            printf("%s", input);
+            // printf("%s", input);
         }
         else
         {
